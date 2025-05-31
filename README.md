@@ -17,14 +17,15 @@ int main() {
     double *ptr;
     ptr = &num;
     *ptr = 25.0;
-    printf("%.2f\n", num);
+    printf("The new value is: %.2f\n", num);
     return 0;
 }
 ```
 
 ## OUTPUT:
-![image](https://github.com/user-attachments/assets/88491e23-5c0f-433c-9585-58ce563fa9bf)
- 	
+
+![438873845-92452c8f-633c-4411-acc5-a98e2d8a4d9c](https://github.com/user-attachments/assets/295ea5a7-8e7f-4ccd-9ca8-cc8f264d41cc)
+
 ## RESULT:
 Thus the program to convert a 23.65 into 25 using pointer has been executed successfully.
  
@@ -59,13 +60,14 @@ int main() {
     int n = 12;
     unsigned long long product;
     product = calculateProduct(n);
-    printf("%llu\n", product);
+    printf("The product of first 12 natural numbers is: %llu\n", product);
     return 0;
 }
 
 ```
 ## OUTPUT:
-![image](https://github.com/user-attachments/assets/07095be5-8ac1-4a1f-a4b3-9e4f02bdd90c)
+
+![438874152-2e80eabc-2ef4-4e55-ae18-30ff4863934d](https://github.com/user-attachments/assets/cac712b4-1a67-4a88-9ec9-b456ad18f340)
          		
 ## RESULT:
 
@@ -90,28 +92,44 @@ Write C Program to find Sum of each row of a Matrix
 ## PROGRAM:
 ```
 #include <stdio.h>
+
 int main() {
-    int matrix[3][3] = {
-        {1, 2, 3},
-        {4, 5, 6},
-        {7, 8, 9}
-    };
-    for (int i = 0; i < 3; i++) {
-        int sum = 0;
-        for (int j = 0; j < 3; j++) {
-            sum += matrix[i][j];
+    int rows, cols;
+    
+    printf("Enter the number of rows: ");
+    scanf("%d", &rows);
+    
+    printf("Enter the number of columns: ");
+    scanf("%d", &cols);
+    
+    int matrix[rows][cols];
+    
+    printf("Enter the elements of the matrix:\n");
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            scanf("%d", &matrix[i][j]);
         }
-        printf("%d\n", sum);
     }
-    return 0; 
+    
+    printf("Sum of each row:\n");
+    for (int i = 0; i < rows; i++) {
+        int row_sum = 0;
+        for (int j = 0; j < cols; j++) {
+            row_sum += matrix[i][j];
+        }
+        printf("Row %d sum: %d\n", i + 1, row_sum);
+    }
+
+    return 0;
 }
+
 ```
 
 ## OUTPUT
-![image](https://github.com/user-attachments/assets/fa63e151-ebd1-4e99-a58d-54ebf5f96fec)
 
+![438874958-54fe40a0-3519-44a4-a38e-6ff436bc1241](https://github.com/user-attachments/assets/fb12c736-4ce3-4df3-a589-e7304c37ae95)
 
- ## RESULT
+## RESULT
  
 Thus the program has been executed successfully.
 
@@ -204,22 +222,30 @@ Step 6: End the program.
 ## PROGRAM
 ```
 #include <stdio.h>
+
 int main() {
-    int arr[10], n, i;
-    int *parr = arr;
-    scanf("%d", &n);
-    for (i = 0; i < n; i++) {
-        scanf("%d", parr + i);
+    int arr[6];
+    int *ptr;
+
+    ptr = arr;
+
+    printf("Enter 6 integers: \n");
+    for (int i = 0; i < 6; i++) {
+        scanf("%d", ptr + i);
     }
-    for (i = 0; i < n; i++) {
-        printf("%d ", *(parr + i));
+
+    printf("The array elements are: \n");
+    for (int i = 0; i < 6; i++) {
+        printf("%d ", *(ptr + i));
     }
+
     return 0;
 }
 ```
 
 ## OUTPUT
-![image](https://github.com/user-attachments/assets/59f4cee6-6ab9-488d-935e-d3dca7f1025a)
+![438875885-b7d99bcb-2b56-45fb-b310-cfeacd09692b](https://github.com/user-attachments/assets/8e9d52a5-b196-445f-9ba4-647137b5eab9)
+
 
 ## RESULT
 
